@@ -3,7 +3,7 @@
 This is an application to explore a dataset, containing the data on the passengers of the Titanic.
 
 ## Dataset 
-The dataset can be obtained [here](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets)).
+The dataset can be obtained [here](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets).
 The dataset description can be found [here](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic.html).
 
 ## Using the application

@@ -2,8 +2,8 @@ name: titanic_explorer
 account: fbagirov
 server: shinyapps.io
 appId: 127072
-bundleId: 564621
+bundleId: 564645
 url: https://fbagirov.shinyapps.io/titanic_explorer/
-when: 1474513247.21613
+when: 1474514840.84524
 asMultiple: FALSE
 asStatic: FALSE
