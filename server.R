@@ -2,6 +2,9 @@ library(shiny)
 library(dplyr) 
 library(ggplot2)
 
+t1 <- read.csv("data/titanic3.csv")
+
+
 function(input,output,session) {
         output$coolplot <- renderPlot({
                 filtered <- 
