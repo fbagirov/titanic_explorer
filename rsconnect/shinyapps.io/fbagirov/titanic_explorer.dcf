@@ -1,0 +1,9 @@
+name: titanic_explorer
+account: fbagirov
+server: shinyapps.io
+appId: 127072
+bundleId: 564619
+url: https://fbagirov.shinyapps.io/titanic_explorer/
+when: 1474512894.88083
+asMultiple: FALSE
+asStatic: FALSE

@@ -9,7 +9,7 @@ t1 <- read.csv("data/titanic3.csv")
 
 #Building the UI
 fluidPage(
-        titlePanel("Titanic dataset"),
+        titlePanel("Titanic dataset explorer"),
         #adding a layout
         sidebarLayout(
                 sidebarPanel(
