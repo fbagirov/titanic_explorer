@@ -1,0 +1,61 @@
+Titanic dataset explorer
+========================================================
+author: Feyzi Bagirov
+date: Sep 22, 2016
+autosize: true
+
+
+Background/Motivation
+========================================================
+The data set that I choose was from the Titanic dataset, containing the data on the passengers of the Titanic. The dataset can be downloaded here:
+<biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3.xls> 
+
+Since this data is in Excel format, we will need to first convert it to .CSV format. 
+
+The materials can be found in:
+
+Web app: <https://fbagirov.shinyapps.io/titanic_explorer/>
+
+GitHub Repo: <https://github.com/fbagirov/titanic_explorer>
+
+
+The application is suitable for: 
+
+- Students
+- Data Scientists/Analysts
+- R/Rstudio and Shiny enthusiasts
+- Historians 
+
+Code for plots
+========================================================
+shiny, dplyr and ggplot2 Libraries were used for the plotting. Here is the code for a static view of the default plot that is rendered on the web app:
+
+```r
+library(shiny)
+library(dplyr) 
+library(ggplot2)
+t1 <- read.csv("data/titanic3.csv")
+renderPlot({
+                filtered <- 
+                        t1 %>%
+                        filter(sex == input$sexInput,
+                               age >= input$ageInput[1],
+                               age <= input$ageInput[2],
+                               survived == input$survivedInput)
+                ggplot(filtered, aes(age)) + geom_histogram()})
+```
+
+<!--html_preserve--><div id="outabe63e37feebcfcf" class="shiny-plot-output" style="width: 100% ; height: 400px"></div><!--/html_preserve-->
+
+Guidelines to reproduce locally
+========================================================
+To run locally this App on your computer you do NOT need to fork this repo. Please follow these instructions:
+
+1. Install the necessary packages to run RStudio’s Shiny Server locally. Please view the well documented requirements in the getting started page: http://shiny.rstudio.com/articles/shinyapps.html
+
+Run the following command in the RStudio:
+runGitHub(“titanic_explorer”, “fbagirov”)
+
+For more information
+========================================================
+For more information about the several MOOCs comprised in this Specialization, please visit: https://www.coursera.org/specialization/jhudatascience/
